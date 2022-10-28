@@ -23,7 +23,7 @@
                     <div class="fields">
                         <div class="input-field">
                             <label>Full Name</label>
-                            <input type="text" placeholder="Enter your name *" required>
+                            <input type="text" id="username" placeholder="Enter your name *" required>
                         </div>
 
                         <div class="input-field">
@@ -38,7 +38,7 @@
 
                         <div class="input-field">
                             <label>Mobile Number</label>
-                            <input type="number" name="mobile" id="mob" placeholder="Enter mobile number *" onchange="checkMobileNumber(mobile.value)" required>
+                            <input type="tel" name="phone" id="phone" placeholder="Enter mobile number *" onchange="checkMobileNumber(mobile.value)" required>
                         </div>
 
                         <div class="input-field">
@@ -93,16 +93,11 @@
                         </div>
                     </div>
 
-                    <div class="buttons">
-                        <button class="verifyBtn" id="verify" onclick="enableNum()">
-                            <span class="btnText">Verify</span>
-                        </button>
-                        
-                        <button class="nextBtn" id="next" disabled >
-                            <span class="btnText">Next</span>
-                            <i class="uil uil-navigator"></i>
-                        </button>
-                    </div>                    
+                    <button class="nextBtn" id="next" >
+                        <span class="btnText">Next</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+                                      
                 </div> 
             </div>
 

@@ -1,9 +1,8 @@
 const form = document.querySelector("form"),
-        verifyBtn = form.querySelector(".verifyBtn"),
         nextBtn = form.querySelector(".nextBtn"),
         backBtn = form.querySelector(".backBtn"),
+        submit = form.querySelector(".submit"),
         allInput = form.querySelectorAll(".first input");
-
 
 nextBtn.addEventListener("click", ()=> {
     allInput.forEach(input => {
@@ -16,7 +15,6 @@ nextBtn.addEventListener("click", ()=> {
 })
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
-
 
 function getAge() {
     var today = new Date();
@@ -34,16 +32,9 @@ function getAge() {
     }
 }
 
-function enableNum() {
-    document.getElementById("next").disabled = false;
-}
-
 function checkMobileNumber(b){  
     var a = /^\d{10}$/;  
     if (!a.test(b)){  
         alert("Mobile Number Is Not Valid.");        
     }   
-    /*else{  
-        alert("Mobile Number Is Valid.");
-    }*/
 }
