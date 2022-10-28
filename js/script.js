@@ -36,4 +36,14 @@ function getAge() {
 
 function enableNum() {
     document.getElementById("next").disabled = false;
-    }
+}
+
+function checkMobileNumber(b){  
+    var a = /^\d{10}$/;  
+    if (!a.test(b)){  
+        alert("Mobile Number Is Not Valid.");        
+    }   
+    /*else{  
+        alert("Mobile Number Is Valid.");
+    }*/
+}
