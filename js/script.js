@@ -1,4 +1,5 @@
 const form = document.querySelector("form"),
+        verifyBtn = form.querySelector(".verifyBtn"),
         nextBtn = form.querySelector(".nextBtn"),
         backBtn = form.querySelector(".backBtn"),
         allInput = form.querySelectorAll(".first input");
@@ -16,6 +17,7 @@ nextBtn.addEventListener("click", ()=> {
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
+
 function getAge() {
     var today = new Date();
     var birthDate = new Date(document.getElementById('bdate').value);
@@ -30,5 +32,8 @@ function getAge() {
     else{
         document.getElementById('age').value = age.toString();
     }
-    
 }
+
+function enableNum() {
+    document.getElementById("next").disabled = false;
+    }
