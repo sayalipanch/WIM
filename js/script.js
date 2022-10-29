@@ -38,3 +38,10 @@ function checkMobileNumber(b){
         alert("Mobile Number Is Not Valid.");        
     }   
 }
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
