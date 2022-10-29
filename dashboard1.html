@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dashboard</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/dashboard1.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+    <div class="wrapper">
+        <div class="wrapper_left">
+          <ul>
+            <li data-li="Readers" class="active">
+              <p><i class="fa fa-child" aria-hidden="true"></i>
+                <span>Readers</span></p>
+            </li>
+            <li data-li="Genre">
+              <p><i class="fa fa-book" aria-hidden="true"></i>
+                <span>Genre</span></p>
+            </li>
+            <li data-li="Review">
+              <p><i class="fa fa-comment-o" aria-hidden="true"></i>
+                <span>Review</span></p>
+            </li>
+            <li data-li="Authors">
+              <p><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <span>Authors</span></p>
+            </li>
+          </ul>
+        </div>
+        <div class="wrapper_right">
+          <div class="title">
+            Statistics
+          </div>
+          <div class="container">
+            <div class="item Readers">
+                <br><br><br><br>
+                <canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                var xValues = [2018,2019,2020,2021,2022];
+                var yValues = [10,15,20,35,45];
+                
+                new Chart("myChart1", {
+                  type: "line",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      fill: false,
+                      lineTension: 0,
+                      backgroundColor: "#000",
+                      borderColor: "#333",
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    legend: {display: false},
+                    scales: {
+                      yAxes: [{ticks: {min: 10, max:50, fontColor:"#333"},display: true,
+                      scaleLabel: {
+                        display: true,
+                        labelString: 'No. of people',
+                        fontColor:"#333"}}],
+                      xAxes: [{ticks: {fontColor:"#333"},
+                      display: true,
+                      scaleLabel: {
+                        display: true,
+                        labelString: 'Years',
+                        fontColor:"#333",
+                        }}],
+                    }
+                  }
+                });
+                </script>
+            </div>
+            <div class="item Genre" style="display: none;">
+                <br><br><br><br>
+                <canvas id="myChart2" style="width:100%; max-width:1000px;"></canvas>
+			
+                <script>
+                var xValues = ["Action", "Adventure", "Romance", "Comedy","Philosophy", "Informative"];
+                var yValues = [110, 100, 60, 50, 30, 10];
+                var barColors = [
+                "#E74C3C ",
+                "#00aba9",
+                "#2b5797",
+                "#3498DB",
+                "#1e7145",
+                "#F4D03F"
+                
+                ];
+                new Chart("myChart2", {
+                type: "pie",
+                data: {
+                labels: xValues,
+                datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+                }]
+                },
+                options: {
+                title: {
+                display: true,
+                text: "Most Read Genres"
+                }
+                }
+                });
+                </script>
+            </div>
+            <div class="item Review" style="display: none;">
+                <br><br><br><br>
+                <canvas id="myChart3" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                var xValues = ["Poor", "Average", "Good", "Very Good", "Excellent"];
+                var yValues = [5, 20, 15, 10, 3];
+                var barColors = ["#E74C3C", "#00aba9","#2b5797","#3498DB","#F4D03F"];
+                
+                new Chart("myChart3", {
+                  type: "bar",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    legend: {display: false},
+                    title: {
+                      display: true,
+                      text: "User Review"
+                    },
+                    scales:
+                    {xAxes: [{ticks: {fontColor:"#333"},
+                      display: true,
+                      scaleLabel: {
+                        display: true,
+                        labelString: 'Review',
+                        fontColor:"#333",
+                        }}],
+                        yAxes: [{ticks: {fontColor:"#333"},
+                      display: true,
+                      scaleLabel: {
+                        display: true,
+                        labelString: 'No. of readers',
+                        fontColor:"#333",
+                        }}]   
+                    }
+                  }
+                });
+                </script>
+            </div>
+            <div class="item Authors" style="display: none;">
+                <br><br><br><br>
+                <canvas id="myChart4" style="width:100%;max-width:600px"></canvas>
+
+                <script>
+                var xValues = ["J.K, Rowling", "Sudha Murthy", "Ruskin Bond", "Rudyard Kipling"];
+                var yValues = [75, 35, 44, 19 ];
+                var barColors = [
+                  "#b91d47",
+                  "#00aba9",
+                  "#2b5797",
+                  "#e8c3b9",
+                  "#1e7145"
+                ];
+                
+                new Chart("myChart4", {
+                  type: "doughnut",
+                  data: {
+                    labels: xValues,
+                    datasets: [{
+                      backgroundColor: barColors,
+                      data: yValues
+                    }]
+                  },
+                  options: {
+                    title: {
+                      display: true,
+                      text: "Popularity of Authors"
+                    }
+                  }
+                });
+                </script>
+            </div>
+          </div>
+        </div>
+      </div>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

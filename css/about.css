@@ -27,8 +27,8 @@
 #content li{
     text-align: left;
 }
-#button{
-    display: flex;
+.button{
+    display: inline;
     align-items: center;
     justify-content: center;
     height: 45px;
@@ -38,13 +38,16 @@
     outline: none;
     color: #fff;
     border-radius: 5px;
-    margin: 25px 0;
+    margin: 25px 25px;
     background-color: #02c695;
     transition: all 0.3s linear;
     cursor: pointer;
     font-size: 14px;
     font-weight: 400;
 }
-#button:hover{
+a{
+    text-decoration: none;
+}
+.button:hover{
     background-color: #027256;
 }
