@@ -9,7 +9,11 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
-    background: rgb(163, 163, 163);
+    /*background: rgb(163, 163, 163);*/
+    /*background: url(https://images.unsplash.com/photo-1602722053020-af31042989d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);*/
+    background: url(https://images.unsplash.com/photo-1514894780887-121968d00567?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=873&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
 
 }
 
