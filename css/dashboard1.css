@@ -74,11 +74,9 @@ body {
 .wrapper .wrapper_left ul li.active {
   width: 250px;
 }
-
 .wrapper .wrapper_left ul li.active p {
   color: #fff;
 }
-
 .wrapper .wrapper_left ul li.active:before {
   width: 100%;
   transition: all 0.2s ease;
