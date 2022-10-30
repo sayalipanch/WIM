@@ -15,7 +15,7 @@
     <div class="container">
         <header>Registration</header>
 
-        <form action="#">
+        <form action="home.html">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Personal Details</span>
@@ -38,7 +38,7 @@
 
                         <div class="input-field">
                             <label>Mobile Number</label>
-                            <input type="tel" name="phone" id="phone" placeholder="Enter mobile number *" onchange="checkMobileNumber(mobile.value)" required>
+                            <input type="tel" name="phone" id="phone" placeholder="Enter mobile number *" onchange="checkMobileNumber(phone.value)" required>
                         </div>
 
                         <div class="input-field">
@@ -77,10 +77,9 @@
                             <input type="date" placeholder="Enter expiry date" required>
                         </div>
 
-                        <div class="slidecontainer">
-                            <label>Subscription Period</label>
-                            <input type="range" min="1" max="60" value="0" class="slider" id="myRange">
-                            <p>Number of Months: <span id="demo"></span></p>
+                        <div>
+                            <label for="myfile">Upload Profile Photo </label><br>
+                            <input type="file" id="myfile" name="myfile" required><br>
                         </div>
                     </div>
 
@@ -178,10 +177,16 @@
                             <input type="text" placeholder="Enter Native Place" required>
                         </div>
 
-                        <form action="/action_page.php">
-                            <label for="myfile">Upload profile photo</label>
-                            <input type="file" id="myfile" name="myfile"><br><br>
-                        </form>
+                        <div >
+                            <input type="checkbox" id="check" onclick="show('slide')">
+                            <label for="check">Choose through slider </label><br>
+                        </div>
+
+                        <div class="slidecontainer" id="slide" style="display:none;">
+                            <label>Subscription Period</label>
+                            <input type="range"  min="0" max="60" value="0" class="slider" id="myRange">
+                            <p>Number of Months: <span id="demo"></span></p>
+                        </div>
                     </div>
 
                     <div class="buttons">
@@ -190,7 +195,7 @@
                             <span class="btnText">Back</span>
                         </div>
                         
-                        <button class="sumbit">
+                        <button class="sumbit" onclick="clickAlert()">
                             <span class="btnText">Submit</span>
                             <i class="uil uil-navigator"></i>
                         </button>

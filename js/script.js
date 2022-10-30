@@ -38,10 +38,28 @@ function checkMobileNumber(b){
         alert("Mobile Number Is Not Valid.");        
     }   
 }
+
+function show(box) {
+    var chboxs = document.getElementById("check");
+    var vis = "none";
+    if(chboxs.checked)
+    {
+        vis = "block";
+    }
+    document.getElementById(box).style.display = vis;
+
+
+}
+
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
+}
+
+function clickAlert(){
+    alert('New user registered!');
+    
 }

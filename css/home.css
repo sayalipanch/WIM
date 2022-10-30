@@ -108,7 +108,7 @@ header{
 
 .footer{
     background:#333;
-    position: fixed;
+    position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -121,8 +121,8 @@ header{
   }
   
   .footer .box-container .box{
-    padding:1rem 0;
-    flex:1 1 25rem;
+    padding:0.5rem 3rem;
+    flex:1 1 20rem;
   }
   
   .footer .box-container .box h3{
@@ -151,7 +151,7 @@ header{
   
   .footer .credit{
     text-align: center;
-    padding:2rem 1rem;
+    padding:1rem 1rem;
     margin-top: 1rem;
     font-size: 2rem;
     font-weight: normal;

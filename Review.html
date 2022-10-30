@@ -11,15 +11,23 @@
 <body>
 <div class="container">
 
-    <form action="">
+    <form action="about.html">
         <h3 class="title">Customer Review</h3><br>
         <textarea name="message" rows="10" cols="98" placeholder="We value your feedback and aim to improve with your suggestions."></textarea>
-        <br><br>
-        <input type="submit" value="Submit" class="submit-btn">
+        <br>
+        <br>
+        <input type="submit" value="Submit" class="submit-btn" onclick="Alert()">
 
     </form>
 
-</div>    
-    
+</div>   
+
+<script>
+    function Alert()
+    {
+        alert('Thank you for your feedback!');
+    }
+</script>
+
 </body>
 </html>
