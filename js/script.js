@@ -16,6 +16,8 @@ nextBtn.addEventListener("click", ()=> {
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
+submit.addEventListener("click", () => alert("New User created!"));
+
 function getAge() {
     var today = new Date();
     var birthDate = new Date(document.getElementById('bdate').value);
@@ -46,5 +48,3 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
 }
-
-submit.addEventListener("click", () => alert("New User created!"));
