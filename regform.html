@@ -28,7 +28,7 @@
 
                         <div class="input-field">
                             <label>Date of Birth</label>
-                            <input type="date" name="birth_date" id="bdate" placeholder="Enter birth date *" onchange="getAge()" required>
+                            <input type="date" name="birth_date" id="bdate" placeholder="Enter birth date *" onchange="getAge()">
                         </div>
 
                         <div class="input-field">
@@ -79,7 +79,7 @@
 
                         <div class="slidecontainer">
                             <label>Subscription Period</label>
-                            <input type="range" min="1" max="60" value="0" class="slider" id="myRange" required>
+                            <input type="range" min="1" max="60" value="0" class="slider" id="myRange">
                             <p>Number of Months: <span id="demo"></span></p>
                         </div>
                     </div>
@@ -202,5 +202,30 @@
 
     <script src="js/script.js"></script>
 </body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCceBjRQyxV2UDD7cloEVF02PitPL6dZA8",
+      authDomain: "authentication-for-webpage.firebaseapp.com",
+      databaseURL: "https://authentication-for-webpage-default-rtdb.firebaseio.com",
+      projectId: "authentication-for-webpage",
+      storageBucket: "authentication-for-webpage.appspot.com",
+      messagingSenderId: "153416431417",
+      appId: "1:153416431417:web:224979db94c2faf05b9ae8"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+  </script>
 
 </html>

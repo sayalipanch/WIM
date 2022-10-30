@@ -16,8 +16,6 @@ nextBtn.addEventListener("click", ()=> {
 
 backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
-submit.addEventListener("click", () => alert("New User created!"));
-
 function getAge() {
     var today = new Date();
     var birthDate = new Date(document.getElementById('bdate').value);
@@ -40,7 +38,6 @@ function checkMobileNumber(b){
         alert("Mobile Number Is Not Valid.");        
     }   
 }
-
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
