@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="It's a tool to create awesome receipts in the generic format as used in Indian shops.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500' rel='stylesheet' type='text/css'>
+
+    <!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
+
+    <title>Generate receipts</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="nav-outer">
+    <div class="container" style="height: 100px; max-width: 100%; padding: 0 !important;">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <a class="" href="/">
+                    <img class="" src="img/book.png" alt="Billing" width="80px">
+                </a>
+
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active">
+                        <a class="" href="/">Issue Books</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+    </div>
+</div>
+
+<div class="container">
+    <div class="">
+        <form class="form-horizontal" action="#" method="post" role="form">
+            <!-- <legend>Seller</legend>
+            <span class="btn btn-small btn-info change-seller-info">Edit Seller Info</span>
+
+            <div class="company-info hide">
+                <div class="form-group">
+                    <label for="company-name" class="col-sm-2 control-label">Company name</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="company-name" placeholder="Apple Inc" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-address" class="col-sm-2 control-label">Address</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="company-address" placeholder="Cupertino, California"
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-tin" class="col-sm-2 control-label">TIN</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="company-tin" placeholder="07086947245" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-tin" class="col-sm-2 control-label">Service Tax No</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="company-service-tax-no" placeholder="07086947245"
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-contact" class="col-sm-2 control-label">Phone number</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="company-contact" placeholder="+91 9945 153216"
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="company-currency" class="col-sm-2 control-label">Currency</label>
+
+                    <div class="col-sm-10">
+                        <select class="form-control" id="company-currency">
+                            <option value="&#8377;">INR</option>
+                            <option value="CZK">CZK</option>
+                            <option value="$">USD</option>
+                        </select>
+                    </div>
+                </div>
+            </div> -->
+<!-- 
+            <legend>Issuer Details</legend>
+            <div class="form-group">
+                <label for="invoice-type-radio" class="col-sm-2 control-label">Issuer Type</label>
+
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="radio" name="invoiceType" value="Tax"> Member
+                        </label>
+                        <label>
+                            <input type="radio" id="invoice-type-radio" name="invoiceType" value="Retail" checked>
+                            Non-Member
+                        </label>
+                    </div>
+                </div>
+            </div> -->
+
+            <legend>Issuer Details</legend>
+            <div class="form-group">
+                <label for="invoice-type-radio" class="col-sm-2 control-label">Issuer Type</label>
+
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="radio" name="invoiceType" value="Tax"> Member
+                        </label>
+                        <label>
+                            <input type="radio" id="invoice-type-radio" name="invoiceType" value="Retail" checked>
+                            Non-Member
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <label for="billNo" class="col-sm-2 control-label">Date</label>
+
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="billDate" placeholder="Leave blank for today" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="billNo" class="col-sm-2 control-label">Receipt ID</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="billNo" placeholder="23341" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="purchaser" class="col-sm-2 control-label">Name</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="purchaser" placeholder="Mr John Doe" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="purchaser-address" class="col-sm-2 control-label">Address</label>
+
+                <div class="col-sm-10">
+                    <textarea rows="3" class="form-control" id="purchaser-address"
+                              placeholder="Purchaser's address"></textarea>
+                </div>
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="purchaser-tin" class="col-sm-2 control-label">TIN/PAN</label>
+
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="purchaser-tin" placeholder="Purchaser's TIN/PAN">
+                </div>
+            </div> -->
+
+            <legend>Items</legend>
+            <div class="row heading">
+                <div class="col-sm-1">Sr No</div>
+                <div class="col-sm-5">Book Name</div>
+                <div class="col-sm-2">Montly price</div>
+                <div class="col-sm-2">No. of Months</div>
+                <div class="col-sm-2">Price</div>
+            </div>
+
+            <div class="items">
+                <div class="row item" data-serial="1">
+                    <div class="col-sm-1 sr-no">1</div>
+                    <div class="col-sm-5">
+                        <input class="form-control item-name" type="text">
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            <span class="input-group-addon currency">&#8377;</span>
+                            <input class="form-control item-price" type="number">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="form-control item-quantity" value="1" type="number">
+                    </div>
+                    <div class="col-sm-2">
+                        <p class="form-control-static item-row-price"><span class="currency">&#8377;</span> <span
+                                class="numeral">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-1 col-sm-2">
+                    <span class="btn btn-primary add-item">Add item</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Total</label>
+
+                <div class="col-sm-offset-8 col-sm-2">
+                    <p class="form-control-static item-total"><span class="currency">&#8377;</span> <span
+                            class="numeral">0</span></p>
+                </div>
+            </div>
+
+            <legend>Discount</legend>
+            <div class="form-group">
+                <label for="discount" class="col-sm-2 control-label">Percentage</label>
+
+                <div class="col-sm-2">
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="discount" value="0" placeholder="Discount"
+                               max="100" min="0">
+                        <span class="input-group-addon">%</span>
+                    </div>
+                </div>
+                <div class="col-sm-offset-6 col-sm-2">
+                    <p class="form-control-static discount-amount">- <span class="currency">&#8377;</span> <span
+                            class="numeral">0</span></p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Total</label>
+
+                <div class="col-sm-offset-8 col-sm-2">
+                    <p class="form-control-static discount-total"><span class="currency">&#8377;</span> <span
+                            class="numeral">0</span></p>
+                </div>
+            </div>
+
+            <!-- <legend>Taxes</legend>
+            <div class="form-group">
+                <label for="tax-type-check" class="col-sm-2 control-label">Tax Type</label>
+
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="radio" name="taxType" value="VAT"> VAT
+                        </label>
+                        <label>
+                            <input type="radio" id="tax-type-check" name="taxType" value="CST" checked> CST
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="vat" class="col-sm-2 control-label">Percentage</label>
+
+                <div class="col-sm-2">
+                    <div class="input-group">
+                        <input type="number" class="form-control" id="vat" value="12.5" placeholder="VAT (12.5%)"
+                               step="0.1">
+                        <span class="input-group-addon">%</span>
+                    </div>
+                </div>
+                <div class="col-sm-offset-6 col-sm-2">
+                    <p class="form-control-static vat-amount"><span class="currency">&#8377;</span> <span
+                            class="numeral">0</span></p>
+                </div>
+            </div>
+
+            <div class="service-tax-group hide">
+                <div class="form-group">
+                    <label for="service-tax" class="col-sm-2 control-label">Service Tax</label>
+
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            <input type="number" class="form-control" id="service-tax" value="0"
+                                   placeholder="Service Tax" step="0.1">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-offset-6 col-sm-2">
+                        <p class="form-control-static service-tax-amount"><span class="currency">&#8377;</span> <span
+                                class="numeral">0</span></p>
+                    </div>
+                </div>
+
+                <div class="service-tax-extras">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Swachchh Bharat Cess (0.5%)</label>
+
+                        <div class="col-sm-offset-6 col-sm-2">
+                            <p class="form-control-static bharat-cess"><span class="currency">&#8377;</span> <span
+                                    class="numeral">0</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Krishi Kalyan Cess (0.5%)</label>
+
+                        <div class="col-sm-offset-6 col-sm-2">
+                            <p class="form-control-static kk-cess"><span class="currency">&#8377;</span>
+                                <span class="numeral">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!--<div class="form-group">-->
+            <!--<label class="col-sm-2 control-label">Total</label>-->
+            <!--<div class="col-sm-offset-8 col-sm-2">-->
+            <!--<p class="form-control-static total-with-tax">&#8377; 0</p>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <hr/>
+            <!--<div class="form-group">-->
+            <!--<label class="col-sm-2 control-label">Round off</label>-->
+            <!--<div class="col-sm-offset-8 col-sm-2">-->
+            <!--<p class="form-control-static round-off">+ &#8377; 0.00</p>-->
+            <!--</div>-->
+            <!--</div>-->
+
+        </form>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="btn-group-lg">
+                    <button class="btn btn-success generate-bill">Generate Bill</button>
+                    <button class="btn disabled hide generate-blank-bill" title="Blank bill is currently disabled">
+                        Generate Blank Bill
+                    </button>
+                    <button class="btn btn-primary new-bill">New Bill</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- <hr/>
+        &#169; <span class="current-year">2017</span> ClayFish Technologies. All rights reserved. -->
+    </footer>
+</div>
+
+<div class="row item-template hide" data-serial="0">
+    <div class="col-sm-1 sr-no">0</div>
+    <div class="col-sm-5">
+        <input class="form-control item-name" type="text">
+    </div>
+    <div class="col-sm-2">
+        <div class="input-group">
+            <span class="input-group-addon currency">&#8377;</span>
+            <input class="form-control item-price" type="number">
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <input class="form-control item-quantity" value="1" type="number">
+    </div>
+    <div class="col-sm-2">
+        <p class="form-control-static item-row-price"><span class="currency">&#8377;</span> <span
+                class="numeral">0</span></p>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src='libs/pdfmake.js'></script>
+<script src='libs/vfs_fonts.js'></script>
+<script src="js/enums.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/text_number.js"></script>
+<script src="js/bill_writer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
