@@ -12,7 +12,7 @@ function App() {
 
 	const initPayment = (data) => {
 		const options = {
-			key: "rzp_test_zfCv4QOnoqQ3E1",
+			key: "#Key ID",
 			amount: data.amount,
 			currency: data.currency,
 			name: book.name,
