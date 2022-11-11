@@ -1,8 +1,0 @@
-Twilio
-const accountSid = "ACaa46d34653c39fc975309db95022ae09" ;
-const authToken = "6a9c8977fa6c0508d9c6c1fda3fe602d";
-const serviceId = "VA82361552206d31b1c355e177d793e4c9";
-
-Razor Pay
-KEY_ID = "rzp_test_zfCv4QOnoqQ3E1"
-KEY_SECRET = "ak6hm4ZZqWm274Hp2cVZnUVb"
